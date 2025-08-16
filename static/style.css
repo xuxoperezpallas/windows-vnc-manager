@@ -1,0 +1,182 @@
+/* Estilos modernos para interfaz de sesiones Windows */
+:root {
+    --primary: #0078d7;
+    --primary-dark: #106ebe;
+    --secondary: #2b2b2b;
+    --light: #f5f5f5;
+    --gray: #e5e5e5;
+    --dark: #1a1a1a;
+    --success: #107c10;
+    --error: #d13438;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: var(--secondary);
+    margin-bottom: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    padding: 25px;
+    margin-bottom: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.alert {
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.alert.success {
+    background-color: #dff6dd;
+    color: #107c10;
+    border-left: 4px solid var(--success);
+}
+
+.alert.error {
+    background-color: #fde7e9;
+    color: var(--error);
+    border-left: 4px solid var(--error);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+input, select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0,120,215,0.2);
+}
+
+.btn-create, .btn-connect, .btn-stop {
+    display: inline-block;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-create {
+    background-color: var(--primary);
+    color: white;
+    width: 100%;
+}
+
+.btn-create:hover {
+    background-color: var(--primary-dark);
+}
+
+.btn-connect {
+    background-color: var(--success);
+    color: white;
+    padding: 8px 15px;
+    margin-right: 10px;
+}
+
+.btn-stop {
+    background-color: #f0f0f0;
+    color: var(--secondary);
+    padding: 8px 15px;
+}
+
+.btn-stop:hover {
+    background-color: #e0e0e0;
+}
+
+.session-info {
+    background-color: #e3f2fd;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-left: 4px solid var(--primary);
+}
+
+.session-list {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+tr:hover {
+    background-color: #f5f7fa;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .card {
+        padding: 15px;
+    }
+    
+    table {
+        font-size: 14px;
+    }
+}
